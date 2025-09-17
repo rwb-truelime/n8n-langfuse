@@ -23,6 +23,14 @@ This project is an **experimental demonstration** and **proof of concept** only.
 
 ---
 
+## FROM N8N WORKFLOW TO TRACE
+
+### N8N workflow
+<img width="3136" height="1659" alt="N8N workflow that will leave traces behind in Langfuse." src="https://github.com/user-attachments/assets/82e65eac-63df-47c6-9f2c-03f065f69b44" />
+
+### Langfuse Trace
+<img width="1906" height="992" alt="Langfuse trace of the example N8N workflow!" src="https://github.com/user-attachments/assets/f4e1a8ed-f903-45f4-a35a-13084e768bde" />
+
 ## Overview
 
 This project provides a ready-to-use solution for instrumenting your self-hosted n8n instance to send detailed traces directly to Langfuse via OpenTelemetry. This is especially powerful for AI workflows, as it maps n8n nodes to Langfuse observation types (generation, agent, tool, etc.).
