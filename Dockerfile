@@ -11,16 +11,6 @@ WORKDIR /usr/local/lib/node_modules/n8n
 # Using OTEL api so no need to install Langfuse packages
 # RUN npm i -g langfuse langfuse-langchain --loglevel verbose
 
-# Install the custom nodes
-RUN mkdir /home/node/.n8n/nodes
-COPY n8n-nodes-limescape-docs-1.1.20.tgz /home/node/.n8n/nodes/n8n-nodes-limescape-docs-1.1.20.tgz
-COPY limescape-docs-processor-1.1.20.tgz /home/node/.n8n/nodes/limescape-docs-processor-1.1.20.tgz
-RUN cd /home/node/.n8n/nodes/ && npm install ./n8n-nodes-limescape-docs-1.1.20.tgz --loglevel verbose \
-&& npm install n8n-nodes-eml --loglevel verbose \
-n8n-nodes-run-node-with-credentials-x --loglevel verbose \
-&& chown -R node:node /home/node/.n8n/nodes && \
-rm -rf /home/node/.n8n/nodes/*.tgz
-
 # Install OpenTelemetry dependencies required by tracing.js
 RUN mkdir -p /opt/opentelemetry
 WORKDIR /opt/opentelemetry
