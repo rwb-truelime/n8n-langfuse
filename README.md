@@ -204,27 +204,7 @@ The system automatically maps n8n nodes to Langfuse observation types:
 
 ### Core Files
 
-All required files are included in this repository:
-
-#### `tracing/package.json`
-```json
-{
-  "name": "n8n-otel-tracing",
-  "version": "1.0.0",
-  "dependencies": {
-    "@opentelemetry/api": "^1.7.0",
-    "@opentelemetry/auto-instrumentations-node": "^0.40.0",
-    "@opentelemetry/exporter-logs-otlp-http": "^0.45.0",
-    "@opentelemetry/exporter-trace-otlp-http": "^0.45.0",
-    "@opentelemetry/instrumentation": "^0.45.0",
-    "@opentelemetry/resources": "^1.18.0",
-    "@opentelemetry/sdk-node": "^0.45.0",
-    "@opentelemetry/semantic-conventions": "^1.18.0",
-    "flat": "^6.0.1",
-    "winston": "^3.11.0"
-  }
-}
-```
+All required files are included in this repository.
 
 ## Security Considerations
 
